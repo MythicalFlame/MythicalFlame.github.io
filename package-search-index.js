@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"me.mythicalflame.spigotmodding"},{"l":"me.mythicalflame.spigotmodding.commands"},{"l":"me.mythicalflame.spigotmodding.exceptions"},{"l":"me.mythicalflame.spigotmodding.functionalities"},{"l":"me.mythicalflame.spigotmodding.items"},{"l":"me.mythicalflame.spigotmodding.utilities"}];updateSearchResults();
