@@ -1,0 +1,13 @@
+cabal-version:      3.14
+name:               haskellculus-wasm
+version:            0.1.0.0
+author:             MythicalFlame
+maintainer:         82922845+MythicalFlame@users.noreply.github.com
+build-type:         Simple
+
+executable haskellculus-wasm
+    main-is:          Wasm.hs
+    build-depends:    base >=4.22 && <5,
+                      haskellculus
+    default-language: Haskell2010
+    ghc-options: -no-hs-main -optl-mexec-model=reactor -optl-Wl,--export=hs_init,--export=callocBuffer,--export=freeBuffer,--export=hs_differentiateText,--export=hs_textExprToLatex

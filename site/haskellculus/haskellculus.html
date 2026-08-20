@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Haskellculus</title>
+		<script type="module" src="haskellculus.js"></script>
+		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+	</head>
+	<body>
+		<h1>Haskellculus</h1>
+		<p><a href="https://github.com/MythicalFlame/Haskellculus">Haskellculus</a> is a program that can take in a mathematical expression, differentiate, and simplify it (to an extent).</p>
+		<p>This site uses Haskellculus version: 0.2.0.0</p>
+		<details>
+			<summary>Usage</summary>
+			<p>Since I have not yet had the time to create a proper parser, you must enter expressions in the form of the math expression (MExp) data type</p>
+			<p>We have that an MExp = Lit Rational | Pi | Var String | Add MExp MExp | Mul MExp MExp | Div MExp MExp | Pow MExp MExp | Ln MExp | Sin MExp | Cos MExp</p>
+			<p>If you are creating a literal, the rational inside must be typed as numerator % denominator and surrounded by parentheses. For example, to represent the fraction \(\frac{67}{420}\), you can write (Lit (67 % 420))</p>
+			<p>Note that if necessary, you must use parentheses (to group together expressions)</p>
+			<p>An example of an expression is Pow (Var "x") (Mul (Lit (5 % 1)) (Var "x"))</p>
+			<p>Finally, while you need to put strings in quotation marks for Var, note that you should not put quotation marks in the variable field below.</p> 
+		</details>
+		<hr>
+		<p>
+			<label for="expr">Enter an expression:</label>
+			<input id="expr" name="expr" type="text" autocomplete="off">
+		</p>
+		<p>
+			<label for="var">Enter the variable to differentiate with respect to:</label>
+			<input id="var" name="var" type="text" autocomplete="off">
+		</p>
+		<button type="button" id="differentiateButton">Differentiate</button>
+		<p>Result: <span id="result"></span></p>
+		<p>\(\LaTeX\) formatted result: <span id="latex"></span></p>
+	</body>
+</html>
