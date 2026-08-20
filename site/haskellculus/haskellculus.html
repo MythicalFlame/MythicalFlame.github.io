@@ -8,11 +8,11 @@
 	<body>
 		<h1>Haskellculus</h1>
 		<p><a href="https://github.com/MythicalFlame/Haskellculus">Haskellculus</a> is a program that can take in a mathematical expression, differentiate, and simplify it (to an extent).</p>
-		<p>This site uses Haskellculus version: 0.2.0.0</p>
+		<p>This site uses Haskellculus version: 0.3.0.0</p>
 		<details>
 			<summary>Usage</summary>
 			<p>Since I have not yet had the time to create a proper parser, you must enter expressions in the form of the math expression (MExp) data type</p>
-			<p>We have that an MExp = Lit Rational | Pi | Var String | Add MExp MExp | Mul MExp MExp | Div MExp MExp | Pow MExp MExp | Ln MExp | Sin MExp | Cos MExp</p>
+			<p>We have that an MExp = Lit Rational | Pi | E | Var String | Add MExp MExp | Mul MExp MExp | Div MExp MExp | Pow MExp MExp | Ln MExp | Sin MExp | Cos MExp</p>
 			<p>If you are creating a literal, the rational inside must be typed as numerator % denominator and surrounded by parentheses. For example, to represent the fraction \(\frac{67}{420}\), you can write (Lit (67 % 420))</p>
 			<p>Note that if necessary, you must use parentheses (to group together expressions)</p>
 			<p>An example of an expression is Pow (Var "x") (Mul (Lit (5 % 1)) (Var "x"))</p>
